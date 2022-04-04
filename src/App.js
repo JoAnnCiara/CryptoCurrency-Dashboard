@@ -12,18 +12,18 @@ const App = () => (
             <Navbar />
         </div>
         <div className="main">
-            <Layout>
-                <div className="routes">
-                    <Routes>
-                        <Route  path="/" element={<Homepage />} />
-                        <Route  path="/exchanges" element={<Exchanges />} />
-                        <Route  path=":coinUuId" element={<CryptoDetails />} />
-                        <Route path="/crypto" element={<CryptoDetails />} />
-                        <Route  path="/cryptocurrencies" element={<Cryptocurrencies />} />
-                        <Route  path="/news" element={<News />} />
-                    </Routes>
-                </div>
-            </Layout>
+      <Layout>
+        <div className='routes'>
+                    
+              <Routes>
+                  <Route path="/" element={<Homepage />} />
+                  <Route path="/exchanges" element={<Exchanges />}/>
+                  <Route path="/cryptocurrencies" element={<Cryptocurrencies />} />
+                  <Route path="/crypto/:coinUuId" element={<CryptoDetails />} />
+                  <Route path="/news" element={<News />} />                                   
+              </Routes>
+         </div>
+       </Layout>
             <div className="footer">
                 <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>Copyright © 2022 
                     <Link to="/">
